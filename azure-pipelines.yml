@@ -33,11 +33,3 @@ steps:
   inputs:
     PathtoPublish: $(build.artifactstagingdirectory)    
 
-
-- task: AzureRmWebAppDeployment@4
-  inputs:
-    ConnectionType: 'AzureRM'
-    azureSubscription: 'Visual Studio Enterprise (fe74279e-6ca8-48ff-bf54-90305b257322)'
-    appType: 'functionApp'
-    WebAppName: 'myjavavsample'
-    packageForLinux: '$(System.DefaultWorkingDirectory)/**/*.zip'
